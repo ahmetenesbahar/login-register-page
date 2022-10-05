@@ -21,35 +21,45 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <button href="#" class="btn btn-login" id="login">Login</button>
-      <button href="#" class="btn btn-register" id="register">Sign Up</button>
-    </div>
-    <div class="form-page">
-      <div class="login-form">
-        <h3>Login</h3>
-        <form action="">
-          <input type="email" placeholder="Email" />
-          <input type="password" id="password" placeholder="Password" />
-          <span> <button type="button" id="eye-icon">O</button></span>
-        </form>
-        <button type="submit" class="btn btn-login">Login</button>
+    <div class="main-container">
+      <div class="container">
+        <button href="#" class="btn btn-login btn-colored" id="login">
+          Login
+        </button>
+        <button href="#" class="btn btn-register" id="register">Sign Up</button>
       </div>
-      <div class="register-form active">
-        <h3>Sign Up</h3>
-        <form action="">
-          <input type="text" placeholder="Username" />
-          <input type="email" placeholder="Email" />
-          <input type="password" id="password-2" placeholder="Password" />
-          <span> <button type="button" id="eye-icon-2">O</button></span>
-          <input
-            type="password"
-            id="password-3"
-            placeholder="Confirm Your Password"
-          />
-          <span> <button type="button" id="eye-icon-3">O</button></span>
-        </form>
-        <button class="btn btn-register">Sign Up</button>
+      <div class="form-page">
+        <div class="login-form">
+          <h3>Login</h3>
+          <form action="">
+            <input type="email" placeholder="Email" />
+            <div class="form-group">
+              <input type="password" id="password" placeholder="Password" />
+              <span> <button type="button" id="eye-icon">O</button></span>
+            </div>
+          </form>
+          <button type="submit" class="btn btn-login btn-colored">Login</button>
+        </div>
+        <div class="register-form active">
+          <h3>Sign Up</h3>
+          <form action="">
+            <input type="text" placeholder="Username" />
+            <input type="email" placeholder="Email" />
+            <div class="form-group">
+              <input type="password" id="password-2" placeholder="Password" />
+              <span> <button type="button" id="eye-icon-2">O</button></span>
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                id="password-3"
+                placeholder="Confirm Your Password"
+              />
+              <span> <button type="button" id="eye-icon-3">O</button></span>
+            </div>
+          </form>
+          <button class="btn btn-register btn-colored">Sign Up</button>
+        </div>
       </div>
     </div>
   </body>

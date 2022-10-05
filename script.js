@@ -5,11 +5,15 @@ const registerForm = document.querySelector(".register-form");
 
 login.addEventListener("click", () => {
   registerForm.classList.add("active");
+  login.classList.add("btn-colored");
+  register.classList.remove("btn-colored");
   loginForm.classList.remove("active");
 });
 
 register.addEventListener("click", () => {
   registerForm.classList.remove("active");
+  register.classList.add("btn-colored");
+  login.classList.remove("btn-colored");
   loginForm.classList.add("active");
 });
 
