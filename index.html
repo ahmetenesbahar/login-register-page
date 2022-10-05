@@ -32,21 +32,27 @@
         <div class="login-form">
           <h3>Login</h3>
           <form action="">
-            <input type="email" placeholder="Email" />
+            <input type="email" id="loginEmail" placeholder="Email" />
             <div class="form-group">
               <input type="password" id="password" placeholder="Password" />
               <span> <button type="button" id="eye-icon">O</button></span>
             </div>
           </form>
-          <button type="submit" class="btn btn-login btn-colored">Login</button>
+          <button
+            type="submit"
+            id="loginSubmit"
+            class="btn btn-login btn-colored"
+          >
+            Login
+          </button>
         </div>
         <div class="register-form active">
           <h3>Sign Up</h3>
           <form action="">
-            <input type="text" placeholder="Username" />
-            <input type="email" placeholder="Email" />
+            <input type="text" id="registerUsername" placeholder="Username" />
+            <input type="email" id="registerEmail" placeholder="Email" />
             <div class="form-group">
-              <input type="password" id="password-2" placeholder="Password" />
+              <input type="password" id="password2" placeholder="Password" />
               <span> <button type="button" id="eye-icon-2">O</button></span>
             </div>
             <div class="form-group">
@@ -58,7 +64,9 @@
               <span> <button type="button" id="eye-icon-3">O</button></span>
             </div>
           </form>
-          <button class="btn btn-register btn-colored">Sign Up</button>
+          <button id="registerSubmit" class="btn btn-register btn-colored">
+            Sign Up
+          </button>
         </div>
       </div>
     </div>
