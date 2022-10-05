@@ -9,13 +9,53 @@ body {
   font-family: "Poppins", sans-serif;
   display: flex;
   overflow: hidden;
+  background-color: #47597e;
 }
 
 .container {
   height: 100vh;
   width: 30%;
-  background: url("https://thumbs.dreamstime.com/b/beach-background-sun-drawing-towel-flip-flops-53218443.jpg");
+  background: url("https://wallpaperaccess.com/full/394054.png");
   background-repeat: no-repeat;
-  object-fit: cover;
   background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  width: 300px;
+  height: 50px;
+  margin: 3rem;
+  display: flex;
+  border-radius: 32px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fef7dc;
+}
+
+.btn:nth-child(1) {
+  margin-bottom: 0.5rem;
+}
+
+.btn-login {
+  background-color: #3282b8;
+}
+
+.btn-login:hover {
+  background-color: #0f4c75;
+  transition: 0.5s;
+}
+
+.btn-register {
+  background-color: #511281;
+}
+
+.btn-register:hover {
+  background-color: #21094e;
+  transition: 0.5s;
 }
