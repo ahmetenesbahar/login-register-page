@@ -41,12 +41,4 @@ thirdEyeIcon.addEventListener("click", () => {
   thirdPassword.setAttribute("type", show);
 });
 
-// Local Storage
-
-const infoEmail = localStorage.getItem("email");
-const infoPassword = localStorage.getItem("password");
-
-const loginSubmit = document.querySelector(".login-submit");
-const registerSubmit = document.querySelector(".register-submit");
-
-loginSubmit.addEventListener("click", () => {});
+// Local Storage ????
