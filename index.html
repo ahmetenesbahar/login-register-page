@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Register Page</title>
+    <title>Login/Register Page</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/2331/2331399.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -17,8 +22,8 @@
   </head>
   <body>
     <div class="container">
-      <a href="#" class="btn btn-login" id="login">Login</a>
-      <a href="#" class="btn btn-register" id="register">Sign Up</a>
+      <button href="#" class="btn btn-login" id="login">Login</button>
+      <button href="#" class="btn btn-register" id="register">Sign Up</button>
     </div>
     <div class="form-page">
       <div class="login-form">
@@ -26,25 +31,25 @@
         <form action="">
           <input type="email" placeholder="Email" />
           <input type="password" id="password" placeholder="Password" />
-          <span> <button id="eye-icon">O</button></span>
+          <span> <button type="button" id="eye-icon">O</button></span>
         </form>
-        <a href="#" class="btn btn-login">Login</a>
+        <button type="submit" class="btn btn-login">Login</button>
       </div>
       <div class="register-form active">
         <h3>Sign Up</h3>
         <form action="">
           <input type="text" placeholder="Username" />
           <input type="email" placeholder="Email" />
-          <input type="password" id="password" placeholder="Password" />
-          <span> <button id="eye-icon">O</button></span>
+          <input type="password" id="password-2" placeholder="Password" />
+          <span> <button type="button" id="eye-icon-2">O</button></span>
           <input
             type="password"
-            id="password"
+            id="password-3"
             placeholder="Confirm Your Password"
           />
-          <span> <button id="eye-icon-2">O</button></span>
+          <span> <button type="button" id="eye-icon-3">O</button></span>
         </form>
-        <a href="#" class="btn btn-register">Sign Up</a>
+        <button class="btn btn-register">Sign Up</button>
       </div>
     </div>
   </body>

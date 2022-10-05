@@ -17,7 +17,10 @@ register.addEventListener("click", () => {
 
 const eyeIcon = document.getElementById("eye-icon");
 const secondEyeIcon = document.getElementById("eye-icon-2");
+const thirdEyeIcon = document.getElementById("eye-icon-3");
 const password = document.getElementById("password");
+const secondPassword = document.getElementById("password-2");
+const thirdPassword = document.getElementById("password-3");
 const passwordConfirm = document.getElementById("password-confirm");
 
 eyeIcon.addEventListener("click", () => {
@@ -26,8 +29,24 @@ eyeIcon.addEventListener("click", () => {
   password.setAttribute("type", show);
 });
 
-eyeIcon.addEventListener("click", () => {
+secondEyeIcon.addEventListener("click", () => {
   const show =
-    passwordConfirm.getAttribute("type") === "password" ? "text" : "password";
-  passwordConfirm.setAttribute("type", show);
+    secondPassword.getAttribute("type") === "password" ? "text" : "password";
+  secondPassword.setAttribute("type", show);
 });
+
+thirdEyeIcon.addEventListener("click", () => {
+  const show =
+    thirdPassword.getAttribute("type") === "password" ? "text" : "password";
+  thirdPassword.setAttribute("type", show);
+});
+
+// Local Storage
+
+const infoEmail = localStorage.getItem("email");
+const infoPassword = localStorage.getItem("password");
+
+const loginSubmit = document.querySelector(".login-submit");
+const registerSubmit = document.querySelector(".register-submit");
+
+loginSubmit.addEventListener("click", () => {});

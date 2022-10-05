@@ -52,6 +52,8 @@ button {
   text-decoration: none;
   color: #fef7dc;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: normal;
 }
 
 .btn:nth-child(1) {
