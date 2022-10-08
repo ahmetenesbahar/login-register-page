@@ -4,6 +4,22 @@ const loginForm = document.querySelector(".login-form");
 const registerForm = document.querySelector(".register-form");
 const loginSubmit = document.getElementById("loginSubmit");
 const registerSubmit = document.getElementById("registerSubmit");
+const signupText = document.getElementById("signupText");
+const loginText = document.getElementById("loginText");
+
+signupText.addEventListener("click", () => {
+  registerForm.classList.remove("active");
+  register.classList.add("btn-colored");
+  login.classList.remove("btn-colored");
+  loginForm.classList.add("active");
+});
+
+loginText.addEventListener("click", () => {
+  registerForm.classList.add("active");
+  login.classList.add("btn-colored");
+  register.classList.remove("btn-colored");
+  loginForm.classList.remove("active");
+});
 
 login.addEventListener("click", () => {
   registerForm.classList.add("active");
