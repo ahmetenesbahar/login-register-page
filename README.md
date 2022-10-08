@@ -17,11 +17,15 @@ Klonlama işleminin ardından live server açarak kodu önizleyebilirsiniz.
 <div>
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Login%2C.png">
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Sign%20Up.png">
+</div>
+
+## Responsive Sizes
+
+<div>
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Login%20Msize.png">
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Sign%20Up%20Msize.png">
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Login%20Ssize.png">
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Sign%20Up%20Ssize.png">
-
 </div>
 
 ## Daha fazlası

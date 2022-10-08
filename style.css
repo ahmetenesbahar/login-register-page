@@ -122,6 +122,19 @@ button {
   margin-top: 1rem;
 }
 
+.remember-me {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.remember-me .checkbox {
+  width: 1.5rem;
+}
+
 .login-form h3 {
   color: #dbe6fd;
   font-size: 2rem;
@@ -235,6 +248,15 @@ button {
     border-radius: 32px;
     overflow: hidden;
   }
+  .minitext {
+    text-align: center;
+  }
+  #loginText {
+    text-align: center;
+  }
+  #signupText {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 655px) {
@@ -254,5 +276,15 @@ button {
     padding: 0;
     margin: 0;
     border-radius: 0;
+  }
+
+  .minitext {
+    text-align: center;
+  }
+  #loginText {
+    text-align: center;
+  }
+  #signupText {
+    text-align: center;
   }
 }

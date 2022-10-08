@@ -30,12 +30,16 @@
       </div>
       <div class="form-page">
         <div class="login-form">
-          <h3>Login</h3>
+          <h3>Satuhaz | Login Page</h3>
           <form action="">
             <input type="email" id="loginEmail" placeholder="Email" />
             <div class="form-group">
               <input type="password" id="password" placeholder="Password" />
               <span> <button type="button" id="eye-icon">O</button></span>
+            </div>
+            <div class="remember-me">
+              <input type="checkbox" class="checkbox" id="checkbox" />
+              <p>Beni Hatırla</p>
             </div>
           </form>
           <button
@@ -45,15 +49,19 @@
           >
             Login
           </button>
-          <p style="color: #fff">
+          <p class="minitext" style="color: #fff">
             Need an account ?
-            <a id="signupText" style="text-decoration: underline" href="#"
+            <a
+              id="signupText"
+              style="text-decoration: underline"
+              href="#"
+              onclick="return false;"
               >Sign Up</a
             >
           </p>
         </div>
         <div class="register-form active">
-          <h3>Sign Up</h3>
+          <h3>Satuhaz | Register Page</h3>
           <form action="">
             <input type="text" id="registerUsername" placeholder="Username" />
             <input type="email" id="registerEmail" placeholder="Email" />
@@ -73,9 +81,13 @@
           <button id="registerSubmit" class="btn btn-register btn-colored">
             Sign Up
           </button>
-          <p style="color: #fff">
+          <p class="minitext" style="color: #fff">
             You already have an account ?
-            <a style="text-decoration: underline" id="loginText" href=""
+            <a
+              style="text-decoration: underline"
+              id="loginText"
+              href=""
+              onclick="return false;"
               >Login</a
             >
           </p>
