@@ -22,6 +22,7 @@ loginText.addEventListener("click", () => {
 });
 
 login.addEventListener("click", () => {
+  document.title = "Satuhaz | Login Page";
   registerForm.classList.add("active");
   login.classList.add("btn-colored");
   register.classList.remove("btn-colored");
@@ -29,6 +30,7 @@ login.addEventListener("click", () => {
 });
 
 register.addEventListener("click", () => {
+  document.title = "Satuhaz | Register Page";
   registerForm.classList.remove("active");
   register.classList.add("btn-colored");
   login.classList.remove("btn-colored");
@@ -93,7 +95,7 @@ thirdEyeIcon.addEventListener("click", () => {
   }
 });
 
-// Local Storage ????
+// Local Storage
 const loginPassword = document.getElementById("password");
 const loginEmail = document.getElementById("loginEmail");
 const registerEmail = document.getElementById("registerEmail");
@@ -135,3 +137,5 @@ const getFromLocalStorage = () => {
   secondPassword.value = registerObject.password;
 };
 getFromLocalStorage();
+
+//Form Validation
