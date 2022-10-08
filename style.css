@@ -235,10 +235,17 @@ button {
   border: none;
 }
 
+.warning {
+  display: flex;
+  color: #d82148;
+  border: #d82148 3px solid;
+
+  border-radius: 32px;
+}
+
 .active {
   display: none;
 }
-
 @media only screen and (max-width: 1024px) {
   .main-container {
     padding: 3rem 5rem;

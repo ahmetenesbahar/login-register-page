@@ -6,6 +6,10 @@ const loginSubmit = document.getElementById("loginSubmit");
 const registerSubmit = document.getElementById("registerSubmit");
 const signupText = document.getElementById("signupText");
 const loginText = document.getElementById("loginText");
+var loginMusic = new Audio("audio/loginMusic.mp3");
+
+loginMusic.play();
+loginMusic.loop = true;
 
 signupText.addEventListener("click", () => {
   registerForm.classList.remove("active");
@@ -30,6 +34,10 @@ login.addEventListener("click", () => {
 });
 
 register.addEventListener("click", () => {
+  var signupMusic = new Audio("audio/signupMusic.mp3");
+  loginMusic.pause();
+  signupMusic.play();
+  signupMusic.loop = true;
   document.title = "Satuhaz | Register Page";
   registerForm.classList.remove("active");
   register.classList.add("btn-colored");
@@ -103,14 +111,20 @@ const registerUsername = document.getElementById("registerUsername");
 const checkbox = document.getElementById("checkbox");
 
 loginSubmit.addEventListener("click", () => {
-  if (checkbox.checked == true) {
-    const loginPassword = document.getElementById("password");
-    const loginEmail = document.getElementById("loginEmail");
-    const loginObject = {
-      email: loginEmail.value || "",
-      password: loginPassword.value || "",
-    };
-    localStorage.setItem("loginForm", JSON.stringify(loginObject));
+  const loginPassword = document.getElementById("password");
+  const loginEmail = document.getElementById("loginEmail");
+  const loginObject = {
+    email: loginEmail.value || "",
+    password: loginPassword.value || "",
+    rememberMe: true,
+  };
+
+  if (validateLoginForm(loginObject)) {
+    if (checkbox.checked) {
+      localStorage.setItem("loginForm", JSON.stringify(loginObject));
+    } else {
+      localStorage.removeItem("loginForm");
+    }
   }
 });
 
@@ -128,14 +142,27 @@ registerSubmit.addEventListener("click", () => {
 
 const getFromLocalStorage = () => {
   const loginObject = JSON.parse(localStorage.getItem("loginForm"));
-  loginEmail.value = loginObject.email;
-  loginPassword.value = loginObject.password;
+  loginEmail.value = isNull("email", loginObject);
+  loginPassword.value = isNull("password", loginObject);
+  checkbox.checked = isNull("rememberMe", loginObject);
 
   const registerObject = JSON.parse(localStorage.getItem("registerForm"));
-  registerEmail.value = registerObject.email;
-  registerUsername.value = registerObject.username;
-  secondPassword.value = registerObject.password;
+  registerEmail.value = isNull("email", registerObject);
+  registerUsername.value = isNull("username", registerObject);
+  secondPassword.value = isNull("password", registerObject);
 };
 getFromLocalStorage();
 
+function isNull(data, obj) {
+  return obj ? obj[data] : "";
+}
+
 //Form Validation
+
+const warningBox = document.getElementById("warningBox");
+
+function validateLoginForm(data) {
+  // Bütün (login)inputlar dolu mu ?
+  //emailde gerçekten email mi var?
+  //password min 8 char ortaya karışık olsun
+}
