@@ -110,6 +110,16 @@ button {
   align-items: center;
   flex-direction: column;
   border-radius: 0 32px 32px 0;
+  position: relative;
+}
+
+.form-page .sound-btn {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  right: 2rem;
+  top: 2rem;
 }
 
 .login-form {
@@ -317,6 +327,15 @@ button {
     padding: 0;
     margin: 0;
     border-radius: 0;
+  }
+
+  .form-page .sound-btn {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    right: 0rem;
+    top: 0;
   }
 
   .minitext {

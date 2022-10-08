@@ -6,10 +6,44 @@ const loginSubmit = document.getElementById("loginSubmit");
 const registerSubmit = document.getElementById("registerSubmit");
 const signupText = document.getElementById("signupText");
 const loginText = document.getElementById("loginText");
+const soundBtn = document.getElementById("soundBtn");
 var loginMusic = new Audio("audio/loginMusic.mp3");
-
+var signupMusic = new Audio("audio/signupMusic.mp3");
 loginMusic.play();
+loginMusic.volume = 0.03;
 loginMusic.loop = true;
+var i = 1;
+
+soundBtn.addEventListener("click", () => {
+  var isPlaying = false;
+  loginMusic.volume = 0;
+  signupMusic.volume = 0;
+
+  if (i % 2 == 0) {
+    isPlaying = true;
+  }
+
+  if (
+    loginMusic.volume == 0 &&
+    registerForm.classList.contains("active") &&
+    isPlaying == true
+  ) {
+    loginMusic.play();
+    loginMusic.volume = 0.03;
+    loginMusic.loop = true;
+  }
+  if (
+    signupMusic.volume == 0 &&
+    loginForm.classList.contains("active") &&
+    isPlaying == true
+  ) {
+    signupMusic.play();
+    signupMusic.loop = true;
+    signupMusic.volume = 0.03;
+  }
+  i++;
+  console.log(i);
+});
 
 signupText.addEventListener("click", () => {
   registerForm.classList.remove("active");
@@ -31,13 +65,17 @@ login.addEventListener("click", () => {
   login.classList.add("btn-colored");
   register.classList.remove("btn-colored");
   loginForm.classList.remove("active");
+  loginMusic.play();
+  signupMusic.pause();
+  loginMusic.volume = 0.03;
+  loginMusic.loop = true;
 });
 
 register.addEventListener("click", () => {
-  var signupMusic = new Audio("audio/signupMusic.mp3");
   loginMusic.pause();
   signupMusic.play();
   signupMusic.loop = true;
+  signupMusic.volume = 0.03;
   document.title = "Satuhaz | Register Page";
   registerForm.classList.remove("active");
   register.classList.add("btn-colored");
