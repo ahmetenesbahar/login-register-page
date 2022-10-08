@@ -21,9 +21,11 @@ Klonlama işleminin ardından live server açarak kodu önizleyebilirsiniz.
 
 ## Responsive Sizes
 
-<div>
+<div style="display=flex;">
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Login%20Msize.png">
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Sign%20Up%20Msize.png">
+</div>
+<div style="display=flex;">
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Login%20Ssize.png">
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Sign%20Up%20Ssize.png">
 </div>
