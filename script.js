@@ -42,7 +42,6 @@ soundBtn.addEventListener("click", () => {
     signupMusic.volume = 0.03;
   }
   i++;
-  console.log(i);
 });
 
 signupText.addEventListener("click", () => {
