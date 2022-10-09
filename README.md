@@ -15,7 +15,7 @@ Klonlama işleminin ardından live server açarak kodu önizleyebilirsiniz.
 ## Ekran Görüntüleri
 
 <div>
-<img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Login%2C.png">
+<img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Login.png">
 <img src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Sign%20Up.png">
 </div>
 
@@ -23,7 +23,7 @@ Klonlama işleminin ardından live server açarak kodu önizleyebilirsiniz.
 
 <div style="display=flex; ">
 <img style="width: 40%;" src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Login%20Msize.png">
-<img style="width: 40%;" src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Sign%20Up%20Msize.png">
+<img style="width: 40%;" src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Sign%20Up%20Lsize.png">
 </div>
 <div style="display=flex;">
 <img style="width: 40%;" src="https://github.com/ahmetenesbahar/login-register-page/blob/main/assets/screenshots/Login%20Ssize.png">
