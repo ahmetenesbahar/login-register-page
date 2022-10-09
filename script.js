@@ -7,10 +7,14 @@ const registerSubmit = document.getElementById("registerSubmit");
 const signupText = document.getElementById("signupText");
 const loginText = document.getElementById("loginText");
 const soundBtn = document.getElementById("soundBtn");
-var loginMusic = new Audio("audio/loginMusic.mp3");
-var signupMusic = new Audio("audio/signupMusic.mp3");
+var loginMusic = new Audio(
+  "https://github.com/ahmetenesbahar/login-register-page/blob/main/audio/loginMusic.mp3"
+);
+var signupMusic = new Audio(
+  "https://github.com/ahmetenesbahar/login-register-page/blob/main/audio/signupMusic.mp3"
+);
 loginMusic.play();
-loginMusic.volume = 0.03;
+loginMusic.volume = 0.3;
 loginMusic.loop = true;
 var i = 1;
 
@@ -29,7 +33,7 @@ soundBtn.addEventListener("click", () => {
     isPlaying == true
   ) {
     loginMusic.play();
-    loginMusic.volume = 0.03;
+    loginMusic.volume = 0.3;
     loginMusic.loop = true;
   }
   if (
@@ -39,7 +43,7 @@ soundBtn.addEventListener("click", () => {
   ) {
     signupMusic.play();
     signupMusic.loop = true;
-    signupMusic.volume = 0.03;
+    signupMusic.volume = 0.3;
   }
   i++;
 });
@@ -66,7 +70,7 @@ login.addEventListener("click", () => {
   loginForm.classList.remove("active");
   loginMusic.play();
   signupMusic.pause();
-  loginMusic.volume = 0.03;
+  loginMusic.volume = 0.3;
   loginMusic.loop = true;
 });
 
@@ -74,7 +78,7 @@ register.addEventListener("click", () => {
   loginMusic.pause();
   signupMusic.play();
   signupMusic.loop = true;
-  signupMusic.volume = 0.03;
+  signupMusic.volume = 0.3;
   document.title = "Satuhaz | Register Page";
   registerForm.classList.remove("active");
   register.classList.add("btn-colored");
@@ -202,4 +206,5 @@ function validateLoginForm(data) {
   // Bütün (login)inputlar dolu mu ?
   //emailde gerçekten email mi var?
   //password min 8 char ortaya karışık olsun
+  return data;
 }
