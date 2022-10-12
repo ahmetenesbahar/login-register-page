@@ -13,6 +13,11 @@ var loginMusic = new Audio(
 var signupMusic = new Audio(
   "https://github.com/ahmetenesbahar/login-register-page/blob/main/audio/signupMusic.mp3"
 );
+
+var errorMusic = new Audio(
+  "https://github.com/ahmetenesbahar/login-register-page/blob/main/audio/error.mp3"
+);
+
 loginMusic.play();
 loginMusic.volume = 0.3;
 loginMusic.loop = true;
@@ -213,27 +218,45 @@ function validateLoginForm(data) {
   if (emailValue === "") {
     warningText.innerText = "Login Failed : Email can't be blank !";
     warningBox.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
   } else if (!isEmail(emailValue)) {
     warningText.innerText = "Login Failed : Please enter a valid email !";
     warningBox.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
   }
 
   if (passwordValue === "") {
     warningText.innerText = "Login Failed : Password can't be blank !";
     warningBox.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
   } else if (!isPassword(passwordValue)) {
     warningText.innerText = "Login Failed : Please enter a valid password !";
     warningBox.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
   }
 
   if (!isPassword(passwordValue) && !isEmail(emailValue)) {
     warningText.innerText =
       "Login Failed : Your password and email is not valid !";
     warningBox.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
   }
   if (emailValue === "" && passwordValue === "") {
     warningText.innerText = "Login Failed : Inputs can't be blank !";
     warningBox.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
   }
 
   if (
@@ -243,6 +266,7 @@ function validateLoginForm(data) {
     passwordValue != ""
   ) {
     warningBox.classList.add("active");
+    errorMusic.pause();
   }
   return data;
 }
