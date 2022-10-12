@@ -247,10 +247,15 @@ button {
 
 .warning {
   display: flex;
-  color: #d82148;
-  border: #d82148 3px solid;
-
+  color: #fff;
+  background-color: #c84361;
   border-radius: 32px;
+  padding: 0.5rem;
+  margin: 1rem;
+  transition: 0.5s;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .active {

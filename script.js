@@ -201,10 +201,60 @@ function isNull(data, obj) {
 //Form Validation
 
 const warningBox = document.getElementById("warningBox");
+const warningText = document.getElementById("warningText");
 
 function validateLoginForm(data) {
   // Bütün (login)inputlar dolu mu ?
   //emailde gerçekten email mi var?
   //password min 8 char ortaya karışık olsun
+  const emailValue = data.email.trim();
+  const passwordValue = data.password.trim();
+
+  if (emailValue === "") {
+    warningText.innerText = "Login Failed : Email can't be blank !";
+    warningBox.classList.remove("active");
+  } else if (!isEmail(emailValue)) {
+    warningText.innerText = "Login Failed : Please enter a valid email !";
+    warningBox.classList.remove("active");
+  }
+
+  if (passwordValue === "") {
+    warningText.innerText = "Login Failed : Password can't be blank !";
+    warningBox.classList.remove("active");
+  } else if (!isPassword(passwordValue)) {
+    warningText.innerText = "Login Failed : Please enter a valid password !";
+    warningBox.classList.remove("active");
+  }
+
+  if (!isPassword(passwordValue) && !isEmail(emailValue)) {
+    warningText.innerText =
+      "Login Failed : Your password and email is not valid !";
+    warningBox.classList.remove("active");
+  }
+  if (emailValue === "" && passwordValue === "") {
+    warningText.innerText = "Login Failed : Inputs can't be blank !";
+    warningBox.classList.remove("active");
+  }
+
+  if (
+    isEmail(emailValue) &&
+    isPassword(passwordValue) &&
+    emailValue != "" &&
+    passwordValue != ""
+  ) {
+    warningBox.classList.add("active");
+  }
   return data;
+}
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
+}
+
+function isPassword(password) {
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+    password
+  );
 }
