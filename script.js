@@ -10,6 +10,7 @@ const soundBtn = document.getElementById("soundBtn");
 var loginMusic = new Audio(
   "https://github.com/ahmetenesbahar/login-register-page/blob/main/audio/loginMusic.mp3"
 );
+
 var signupMusic = new Audio(
   "https://github.com/ahmetenesbahar/login-register-page/blob/main/audio/signupMusic.mp3"
 );
