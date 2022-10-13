@@ -244,6 +244,10 @@ button {
   outline: none;
   border: none;
 }
+.minitext {
+  text-align: center;
+  padding: 0 1rem;
+}
 
 .warning {
   display: flex;
@@ -274,8 +278,10 @@ button {
     border-radius: 32px;
     overflow: hidden;
   }
+
   .minitext {
     text-align: center;
+    padding: 0 1rem;
   }
   #loginText {
     text-align: center;
