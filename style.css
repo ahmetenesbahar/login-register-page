@@ -261,6 +261,18 @@ button {
   align-items: center;
   justify-content: center;
 }
+.success {
+  display: flex;
+  color: #fff;
+  background-color: #90c8ac;
+  border-radius: 32px;
+  padding: 0.5rem;
+  margin: 1rem;
+  transition: 0.5s;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
 .active {
   display: none;
@@ -277,6 +289,11 @@ button {
     width: 100%;
     border-radius: 32px;
     overflow: hidden;
+  }
+
+  .warning {
+    margin: 0;
+    height: 50px;
   }
 
   .minitext {
@@ -309,7 +326,12 @@ button {
     margin: 0;
     border-radius: 0;
   }
-
+  .warning {
+    height: 80px;
+  }
+  #warningTextRegister {
+    font-size: 18px;
+  }
   .minitext {
     text-align: center;
     padding: 0 1rem;
