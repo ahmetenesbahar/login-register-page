@@ -177,14 +177,19 @@ loginSubmit.addEventListener("click", () => {
 
 registerSubmit.addEventListener("click", () => {
   const registerPassword = document.getElementById("password2");
+  const registerConfirmPassword = document.getElementById("password-3");
   const registerUsername = document.getElementById("registerUsername");
   const registerEmail = document.getElementById("registerEmail");
   const registerObject = {
     username: registerUsername.value || "",
     email: registerEmail.value || "",
     password: registerPassword.value || "",
+    passwordConfirm: registerConfirmPassword.value || "",
   };
-  localStorage.setItem("registerForm", JSON.stringify(registerObject));
+
+  if (validateRegisterForm(registerObject)) {
+    localStorage.setItem("registerForm", JSON.stringify(registerObject));
+  }
 });
 
 const getFromLocalStorage = () => {
@@ -208,6 +213,8 @@ function isNull(data, obj) {
 
 const warningBox = document.getElementById("warningBox");
 const warningText = document.getElementById("warningText");
+const warningBoxRegister = document.getElementById("warningBoxRegister");
+const warningTextRegister = document.getElementById("warningTextRegister");
 
 function validateLoginForm(data) {
   // Bütün (login)inputlar dolu mu ?
@@ -269,6 +276,96 @@ function validateLoginForm(data) {
     warningBox.classList.add("active");
     errorMusic.pause();
   }
+  return data;
+}
+
+function validateRegisterForm(data) {
+  const emailValue = data.email.trim();
+  const passwordValue = data.password.trim();
+  const usernameValue = data.username.trim();
+  const passwordConfirmValue = data.passwordConfirm.trim();
+
+  if (usernameValue === "") {
+    warningTextRegister.innerText =
+      "Register Failed : Username can't be blank !";
+    warningBoxRegister.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
+  } else if (usernameValue[3] == null) {
+    warningTextRegister.innerText =
+      "Register Failed : Username can't be less than 4 characters !";
+    warningBoxRegister.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
+  }
+
+  if (emailValue === "") {
+    warningTextRegister.innerText = "Register Failed : Email can't be blank !";
+    warningBoxRegister.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
+  } else if (!isEmail(emailValue)) {
+    warningTextRegister.innerText =
+      "Register Failed : Please enter a valid email !";
+    warningBoxRegister.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
+  }
+
+  if (passwordValue === "") {
+    warningTextRegister.innerText =
+      "Register Failed : Password can't be blank !";
+    warningBoxRegister.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
+  } else if (!isPassword(passwordValue)) {
+    warningTextRegister.innerText =
+      "Register Failed : Please enter a valid password !";
+    warningBoxRegister.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
+  } else if (passwordValue != passwordConfirmValue) {
+    warningTextRegister.innerText =
+      "Register Failed : Please enter the same password in inputs !";
+    warningBoxRegister.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
+  }
+  if (!isPassword(passwordValue) && !isEmail(emailValue)) {
+    warningTextRegister.innerText =
+      "Register Failed : Your password and email is not valid !";
+    warningBoxRegister.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
+  }
+  if (emailValue === "" && passwordValue === "") {
+    warningTextRegister.innerText = "Register Failed : Inputs can't be blank !";
+    warningBoxRegister.classList.remove("active");
+    errorMusic.play();
+    errorMusic.volume = 0.5;
+    errorMusic.loop = true;
+  }
+
+  if (
+    isEmail(emailValue) &&
+    isPassword(passwordValue) &&
+    emailValue != "" &&
+    passwordValue != "" &&
+    passwordValue === passwordConfirmValue &&
+    usernameValue != ""
+  ) {
+    warningBoxRegister.classList.add("active");
+    errorMusic.pause();
+  }
+
   return data;
 }
 
