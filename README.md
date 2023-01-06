@@ -1,6 +1,6 @@
 ## Login/Register Page
 
-Bu proje HTML CSS JavaScirpt kullanarak geliştirdiğim giriş yap kaydol form örneği uygulamasıdır.
+Bu proje HTML CSS JavaScript kullanarak geliştirdiğim giriş yap kaydol form örneği uygulamasıdır.
 
 ## Kurulum
 
